@@ -1,0 +1,337 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    {% block css %}
+    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/modal-window-processing.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/index.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/menu.css">
+    {% endblock css %}
+    {% block js %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bPopup/0.11.0/jquery.bpopup.min.js"></script>
+    <script src="/static/js/index.js"></script>
+    {% endblock js %}
+    <style>
+        @font-face {
+            font-family: Montserrat; /* Имя шрифта */
+            src: url("/static/fonts/Montserrat-Medium.ttf"); /* Путь к файлу со шрифтом */
+        }
+    </style>
+    <title>{{ title|capfirst }}</title>
+</head>
+<body>
+    <div id="popup-main-modal-1" style="display: none; text-align: -webkit-center;">
+        <div class="popup-main-modal border_radius_class">
+            <a href="#" onclick="bclose('1');">для закрытия нажать на фото</a>
+            <div onclick="bclose('1');" class="main-modal-processing-body">
+                <img id="img-popup" src="/static/img/popup/1.JPG" alt="">
+            </div>
+        </div>
+    </div>
+    <div id="popup-main-modal-2" style="display: none; text-align: -webkit-center;">
+        <div class="popup-main-modal border_radius_class">
+            <a href="#" onclick="bclose('2');">для закрытия нажать на фото</a>
+            <div onclick="bclose('2');" class="main-modal-processing-body">
+                <img id="img-popup" src="/static/img/popup/2.JPG" alt="">
+            </div>
+        </div>
+    </div>
+    <div id="popup-main-modal-3" style="display: none; text-align: -webkit-center;">
+        <div class="popup-main-modal border_radius_class">
+            <a href="#" onclick="bclose('3');">для закрытия нажать на фото</a>
+            <div onclick="bclose('3');" class="main-modal-processing-body">
+                <img id="img-popup" src="/static/img/popup/3.JPG" alt="">
+            </div>
+        </div>
+    </div>
+    <div id="popup-main-modal-4" style="display: none; text-align: -webkit-center;">
+        <div class="popup-main-modal border_radius_class">
+            <a href="#" onclick="bclose('4');">для закрытия нажать на фото</a>
+            <div onclick="bclose('4');" class="main-modal-processing-body">
+                <img id="img-popup" src="/static/img/popup/4.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <div id="popup-main-modal-5" style="display: none; text-align: -webkit-center;">
+        <div class="popup-main-modal border_radius_class">
+            <a href="#" onclick="bclose('5');">для закрытия нажать на фото</a>
+            <div onclick="bclose('5');" class="main-modal-processing-body">
+                <img id="img-popup" src="/static/img/popup/5.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <div id="popup-main-modal-6" style="display: none; text-align: -webkit-center;">
+        <div class="popup-main-modal border_radius_class">
+            <a href="#" onclick="bclose('6');">для закрытия нажать на фото</a>
+            <div onclick="bclose('6');" class="main-modal-processing-body">
+                <img id="img-popup" src="/static/img/popup/6.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="header">
+        <div class="head div-width-display">
+            <img src="/static/img/bottom-img.png" alt="bottom-img" style="float: left">
+            <a href="index.html" class="logo-link">
+                <img src="/static/img/logo.png" alt="logo" style="margin-top: 0.5em;">
+            </a>
+            <img class="mirrorXY" src="/static/img/bottom-img.png" alt="bottom-img" style="float: right">
+            <div class="contact-header">
+                <p><a class="cl-effect-15-a" href="tel:+79522511246">+7 (952) 251-12-46</a></p>
+                <p><a class="cl-effect-15-a" href="mailto:safu-inginiring@yandex.ru">safu-inginiring@yandex.ru</a></p>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-sm bg-col col-serviceor-nav sticky-top justify-content-center heigth-nav bg-color-nav">
+            <ul class="navbar-nav">
+                <li class="nav-item item-menu">
+                    <a class="nav-link text-menu" href="index.html">главная</a>
+                </li>
+                <li class="nav-item item-menu">
+                    <a class="nav-link text-menu" href="#services">услуги</a>
+                </li>
+                <li class="nav-item item-menu">
+                    <a class="nav-link text-menu" href="#team">команда</a>
+                </li>
+                <li class="nav-item item-menu">
+                    <a class="nav-link text-menu" href="#projects">проекты</a>
+                </li>
+                <li class="nav-item item-menu">
+                    <a class="nav-link text-menu" href="#contacts">контакты</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="white-band"></div>
+    <div class="photos">
+        <div class="div-width-display">
+            <div class="photo-processing margin-15">
+                <a href="#" onclick="bopen('1');" class="process-a-ph" style="z-index: 6;">
+                    <img src="/static/img/processing/1.png" alt="">
+                </a>
+                <a href="#" onclick="bopen('2');" class="process-a-ph process-margin-135" style="z-index: 5;"
+                   id="tar">
+                    <img src="/static/img/processing/2.png" alt="">
+                </a>
+                <a href="#" onclick="bopen('3');" class="process-a-ph process-margin-135" style="z-index: 4;">
+                    <img src="/static/img/processing/3.png" alt="">
+                </a>
+                <a href="#" onclick="bopen('4');" class="process-a-ph process-margin-135" style="z-index: 3;">
+                    <img src="/static/img/processing/4.png" alt="">
+                </a>
+                <a href="#" onclick="bopen('5');" class="process-a-ph process-margin-135" style="z-index: 2;">
+                    <img src="/static/img/processing/5.png" alt="">
+                </a>
+                <a href="#" onclick="bopen('6');" class="process-a-ph process-margin-135" style="z-index: 1;">
+                    <img src="/static/img/processing/6.png" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+    <a name="services"></a>
+    <div class="name-section">услуги</div>
+    <div class="services">
+        <div class="div-width-display" style="width: 999px !important">
+            <div class="service-white-background">
+                <div class="service">
+                    <div class="service-name"><p>Научный Консалтинг</p></div>
+                    <div class="service-description">
+                        <p>Исследование свойств и состава продуктов биорефайнинга</p>
+                        <p>Проведение научных исследований в области глубокой химической переработки растительного сырья</p>
+                        <p>Определение качественных характеристик целлюлозно-бумажных материалов</p>
+                        <p>Разработка новых материалов</p>
+                        <p>Моделирование процессов получения полуфабрикатов различного назначения</p>
+                        <p>Реализация программ дополнительного образования</p>
+                        <p>Издательство научно-технической литературы</p>
+                    </div>
+                </div>
+                <div class="service">
+                    <div class="service-name"><p>Оценка, экспертная деятельность и проектный консалтинг</p></div>
+                    <div class="service-description">
+                        <p>Стоимостная оценка собственности:</p>
+                        <p>Оспаривание кадастровой стоимости объектов недвижимости</p>
+                        <p>Кадастровая деятельность</p>
+                        <p>Выполнение судебных строительно-технических и стоимостных экспертиз</p>
+                        <p>Разработка инвестиционно-строительных проектов и оценка их эффективности</p>
+                        <p>Расчет эффективности и окупаемости проектов</p>
+                    </div>
+                </div>
+                <div class="service">
+                    <div class="service-name"><p>ОРГАНИЗАЦИЯ МЕРОПРИЯТИЙ И ИННОВАЦИОННОЙ ДЕЯТЕЛЬНОСТИ</p></div>
+                    <div class="service-description">
+                        <p>ОРГАНИЗАЦИЯ МЕРОПРИЯТИЙ (КОНФЕРЕНЦИИ, ТЕМАТИЧЕСКИЕ НАУЧНЫЕ ШКОЛЫ, ИНТЕНСИВЫ, ОБУЧАЮЩИЕ ИГРЫ)</p>
+                        <p>ОРГАНИЗАЦИЯ СЕМИНАРОВ И КУРСОВ ПО НАУЧНО-ТЕХНИЧЕСКОМУ ТВОРЧЕСТВУ (3D-МОДЕЛИРОВАНИЕ, ПРОГРАММИРОВАНИЕ)</p>
+                        <p>Организация обучающих программ технологического предпринимательства</p>
+                        <p>ИЗГОТОВЛЕНИЕ ИЗДЕЛИЙ НА 3D ПРИНТЕРЕ, ЛАЗЕРНОМ СТАНКЕ С ЧПУ</p>
+                        <p>Компьютерный дизайн</p>
+                        <p>Дизайн и планировка помещений</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a name="team"></a>
+    <div class="name-section margin-top-15">команда</div>
+    <div class="team">
+        <div class="div-width-display">
+            <div class="crewman">
+                <div class="crewman-photo"><img src="/static/img/team/sevastjanova.jpg" alt=""></div>
+                <div class="crewman-description">
+                    <div class="crewman-name"><p>Юлия<br>СЕВАСТЬЯНОВА</p></div>
+                    <div class="crewman-position"><p>ДИРЕКТОР, ЭКСПЕРТ В ОБЛАСТИ ТЕХНОЛОГИИ ЦБП</p></div>
+                </div>
+            </div>
+            <div class="crewman">
+                <div class="crewman-photo"><img src="/static/img/team/glebova.jpg" alt=""></div>
+                <div class="crewman-description">
+                    <div class="crewman-name"><p>Юлия<br>Глебова</p></div>
+                    <div class="crewman-position"><p>эксперт-оценщик, кадастровый инженер</p></div>
+                </div>
+            </div>
+            <div class="crewman">
+                <div class="crewman-photo"><img src="/static/img/team/korshakova.jpg" alt=""></div>
+                <div class="crewman-description">
+                    <div class="crewman-name"><p>Мария<br>Коршакова</p></div>
+                    <div class="crewman-position"><p>Директор технопарка САФУ</p></div>
+                </div>
+            </div>
+        </div>
+        <div class="div-width-display" style="margin-top: -7px; !important;">
+            <div class="crewman">
+                <div class="crewman-description-2">
+                    <div class="crewman-duties">
+                        <ul>
+                            <li>Эксперт в области технологии ЦБП</li>
+                            <li>Образование — высшее техническое, кандидат технических наук, доцент</li>
+                            <li>Автор диссертации «Влияние условий варки на свойства и белимость сульфатной целлюлозы»</li>
+                            <li>Имеет 80 научных публикаций</li>
+                            <li>Опыт работы более 20 лет</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="crewman">
+                <div class="crewman-description-2">
+                    <div class="crewman-duties">
+                        <ul>
+                            <li>Образование – высшее техническое, инженер по специальности «Экспертиза и управление недвижимостью»</li>
+                            <li>Имеет 25 научных публикаций</li>
+                            <li>Опыт работы более 10 лет</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="crewman">
+                <div class="crewman-description-2">
+                    <div class="crewman-duties">
+                        <ul>
+                            <li>Специалист в области проектного управления, основатель Центра детского и подросткового развития «Мечта»
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a name="projects"></a>
+    <div class="name-section margin-top-15">проекты</div>
+    <div class="projects">
+        <div class="div-width-display" style="width: 999px !important">
+            <div class="projects-white-background">
+                <div class="project">
+                    <div class="project-name"><p>Научный Консалтинг</p></div>
+                    <div class="project-description">
+                        <p>Разработка технологии получения специальных сортов целлюлозы</p>
+                        <p>Разработка технологии картона лайнера и флютинга из смеси вторичных и первичных полуфабрикатов</p>
+                        <p>Оптимизация композиции по волокну крафт-лайнера с целью повышения доли НСПЦ при сохранении качества продукции</p>
+                        <p>Разработка рекомендаций по технологическому регулированию КДМ для повышения эффективности и производительности за счет снижения граммажа картона</p>
+                        <p>Разработка технологии получения картона повышенной жёсткости</p>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="project-name"><p>Оценка, экспертная деятельность и проектный консалтинг</p></div>
+                    <div class="project-description">
+                        <p>Расчет платы для сдачи государственной собственности в аренду</p>
+                        <p>Выполнение судебных экспертиз по определению статуса объектов</p>
+                        <p>Выполнение экспертиз на предмет соответствия выполненных услуг требованиям государственного контракта</p>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="project-name"><p>ОРГАНИЗАЦИЯ МЕРОПРИЯТИЙ И ИННОВАЦИОННОЙ ДЕЯТЕЛЬНОСТИ </p></div>
+                    <div class="project-description">
+                        <p>Winter School "Energy, Oil and Gas in the Arctic Region" (2019)</p>
+                        <p>Летняя школа по чистой энергетике, окружающей среде и климату (2019)</p>
+                        <p>Разработка стратегии инновационного развития Архангельской области» в рамках  Архангельского международного форума молодежи «Команда 29» (2018)</p>
+                        <p>Школа моделирования беспилотных летательных аппаратов в арктических условиях  для детей и молодежи (2018)</p>
+                        <p>Международная научно-практическая конференция молодых ученых "Русский Север и Арктика: фундаментальные проблемы истории и современности" (2014-2019)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+    <div class="name-section margin-top-15">партнёры</div>
+    <div class="partners">
+        <div class="div-width-display">
+            <div class="partner">
+                <div class="partner-name"><p>Научный Консалтинг</p></div>
+                <div class="partner-links">
+                    <a href="https://www.appm.ru/" target="_blank" class="a-partners"><img src="/static/img/partners/ACBK.png" alt=""></a>
+                    <a href="http://www.ukobf.ru/" target="_blank" class="a-partners"><img src="/static/img/partners/OBOF.png" alt=""></a>
+                    <a href="https://www.mondigroup.com/" target="_blank" class="a-partners"><img src="/static/img/partners/mondi.png" alt=""></a>
+                    <a href="https://www.ilimgroup.ru/" target="_blank" class="a-partners"><img src="/static/img/partners/ILIM.png" alt=""></a>
+                    <a href="https://imcongroup.ru/" target="_blank" class="a-partners"><img src="/static/img/partners/CG.png" alt=""></a>
+                </div>
+            </div>
+            <div class="partner">
+                <div class="partner-name"><p>Оценка, экспертная деятельность и проектный консалтинг</p></div>
+                <div class="partner-links">
+                    <a href="https://www.rosim.ru/" target="_blank" class="a-partners"><img src="/static/img/partners/ros-imushestvo.png" alt=""></a>
+                    <a href="https://www.nalog.ru/r" target="_blank" class="a-partners"><img src="/static/img/partners/FNS.png" alt=""></a>
+                    <a href="https://www.rosguard.gov.ru/" target="_blank" class="a-partners"><img src="/static/img/partners/ros-gvard.png" alt=""></a><br>
+                    <a href="https://arhangelsk.arbitr.ru/" target="_blank" class="a-partners"><img src="/static/img/partners/arbitrag.png" alt=""></a>
+                    <a href="http://www.bashneft.ru/" target="_blank" class="a-partners"><img src="/static/img/partners/bash-neft.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a name="contacts"></a>
+    <div class="name-section margin-top-15">контакты</div>
+    <div class="contacts">
+        <div class="div-width-display" style="margin-top: 30px;">
+            <div class="contact"><img src="/static/img/logo.png" alt=""></div>
+            <div class="contact">
+                <p class="contacts-tel"><a href="tel:+79522511246 ">+7 (952) 251-12-46</a></p>
+                <p class="contacts-email"><a href="mailto:safu-inginiring@yandex.ru">safu-inginiring@yandex.ru</a></p>
+                <form class="feedback-form" action="" method="post">
+                    <ul>
+                        <li>
+                            <h2>Напишите нам</h2>
+                        </li>
+                        <li>
+                            <label for="name">ФИО</label><input type="text" name="name" id="name" placeholder="Иванов Иван Иванович">
+                        </li>
+                        <li>
+                            <label for="phone">Телефон</label><input type="tel" name="phone" id="phone" placeholder="+7 999 123 45 67">
+                        </li>
+                        <li>
+                            <label for="email">E-mail</label><input type="email" name="email" id="email" placeholder="example@example.com">
+
+                        </li>
+                        <li>
+                            <label for="mess">Сообщение</label><textarea name="message" cols="40" rows="6" id="mess"></textarea>
+                        </li>
+                        <li>
+                            <button type="submit">Отправить</button>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="name-section-footer margin-top-15">
+        <p>Дизайн: <a href="mailto:inessa.sreda@yandex.ru">@inessa.sreda</a></p>
+        <p>Верстка: <a href="mailto:as.ivanov29@yandex.ru">@brd69</a></p>
+    </div>
+</body>
+</html>

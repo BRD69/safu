@@ -1,0 +1,319 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+*, ::after, ::before {
+    box-sizing: inherit;
+}
+
+html{
+    position:relative; /* относительное позиционнирование */
+    min-height:100%; /* минимальная высота */
+}
+
+body{
+    font-family: Montserrat;
+    height: 100%;
+    padding:0;
+    background-color: #1a3c72;
+}
+
+.div-width-display{
+    width: 1000px;
+    display: inline-block;
+}
+.mirrorXY {
+    transform: scale(-1, -1);
+}
+
+.margin-15{
+    margin: 15px 0;
+}
+.margin-top-15{
+    margin-top: 15px;
+}
+
+.name-section{
+    background-color: white;
+    text-align: center;
+    text-transform: uppercase;
+    color: #132f56;
+    font-size: 35px;
+    line-height: 1.2;
+    font-weight: bold;
+}
+
+.name-section-footer{
+    background-color: #1f1c63;
+    color: #adadad;
+    text-align: right;
+    font-size: 10px;
+    padding: 8px 20px;
+}
+
+.name-section-footer p{
+    margin: 0 0;
+}
+
+.header, .photos, .services, .team, .projects, .partners, .contacts{
+    text-align: center;
+}
+
+.contact-header{
+    text-align: right;
+    position: absolute;
+    top: 1.6em;
+    right: 25%;
+}
+
+.contact-header p{
+    margin-bottom: 0; !important;
+}
+
+.contact-header a{
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.white-band{
+    height: 7px;
+    background-color: white;
+}
+
+.service-white-background, .projects-white-background{
+    background-color: #f1f1f1;
+    display: flex;
+}
+
+.photo-processing{
+    display: flex;
+}
+
+.process-a-ph{
+    display: flex;
+    filter: grayscale(100%);
+}
+.process-a-ph:hover{
+    filter: grayscale(0%);
+    transition: .5s;
+}
+.process-margin-135{
+    margin-left: -38px;
+}
+
+.service, .crewman, .project{
+    display: inline-block;
+    float: left;
+    width: 33.33%;
+}
+
+.service-name, .project-name, .partner-name{
+    background: linear-gradient(to left, #1a3c72, #005788);
+    height: 135px;
+}
+
+.service-name p, .project-name p, .partner-name p{
+    text-transform: uppercase;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    margin: 0 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.service-description, .project-description{
+    background: #f1f1f1;;
+    padding: 1em 1em;
+    text-align: left;
+}
+
+.service-description p, .project-description p{
+    text-transform: uppercase;
+    color: #184075;
+    font-weight: bolder;
+}
+
+.team{
+    margin-top: 15px;
+}
+
+.crewman-photo{
+
+}
+
+.crewman-photo img{
+
+}
+
+.crewman-description{
+    background-color: #cbcbcb;
+    height: 300px;
+    margin: 0 30px;
+    margin-top: -70px;
+    background: linear-gradient(160deg, transparent 95px, #cbcbcb 0) top left,
+    linear-gradient(-160deg, transparent 95px, #cbcbcb 0) top right;
+    background-size: 50% 100%;
+    background-repeat: no-repeat;
+}
+
+.crewman-description-2{
+    background-color: #cbcbcb;
+    height: 500px;
+    margin: 0 30px;
+}
+
+.crewman-name{
+    display: inline-block;
+    margin-top: 100px;
+    text-align: left;
+    width: 100%;
+}
+
+.crewman-name p{
+    text-transform: uppercase;
+    color: white;
+    font-size: 27px;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.crewman-position{
+    margin-top: 20px;
+}
+
+.crewman-position p{
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #132f56;
+}
+.crewman-duties {
+    padding: 0 10px;
+}
+
+.crewman-duties ul{
+    list-style-type: none;
+}
+
+.crewman-duties ul li{
+    color: #132f56;
+    margin-bottom: 10px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.partner, .contact{
+    display: inline-block;
+    float: left;
+    width: 50%;
+}
+
+.partner-links{
+    background-color: #babec9;
+}
+
+.partner-links a{
+    filter: grayscale(100%);
+}
+
+.partner-links a:hover{
+    filter: grayscale(0%);
+}
+
+.partner-links a img{
+    height: 50px;
+    margin: 10px 10px;
+}
+
+.contact p a{
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.contact form p{
+    text-transform: uppercase;
+    color: white;
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.contacts-tel{
+    text-align: left;
+    margin-left: 130px;
+}
+
+.contacts-tel:before{
+    content: url(../img/tel-icon.png);
+    padding: 0 10px;
+}
+
+.contacts-email{
+    text-align: left;
+    margin-left: 130px;
+}
+
+.contacts-email:before{
+    content: url(../img/email-icon.png);
+    padding: 0 10px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #f5f5f5;
+}
+
+.feedback-form ul {
+    list-style-type:none;
+    list-style-position:outside;
+    margin:0;
+    padding:0;
+}
+.feedback-form li{
+    padding:5px;
+    position:relative;
+}
+
+.feedback-form h2 {
+    margin: 0;
+    display: inline;
+    text-transform: uppercase;
+    color: white;
+}
+
+.feedback-form label {
+    width: 150px;
+    margin-top: 3px;
+    display: inline-block;
+    float: left;
+    padding: 3px;
+    color: white;
+    text-align: right;
+}
+.feedback-form input {
+    height:20px;
+    width:300px;
+    padding:5px 8px;
+    background-color: #8194b2;
+}
+.feedback-form textarea {
+    padding:8px;
+    width:300px;
+    background-color: #8194b2;
+}
+.feedback-form button {
+    margin-left:156px;
+    border-width: 4.43px;
+    border-color: rgb(203, 203, 203);
+    border-style: solid;
+    border-radius: 10px;
+    background-color: rgb(203, 203, 203);}
+
+
+

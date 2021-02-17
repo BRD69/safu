@@ -1,0 +1,32 @@
+.heigth-nav{
+    height: 10px;
+    opacity: 0.8;
+}
+
+.item-menu{
+    margin: 0 3em !important;
+}
+
+.text-menu{
+    text-transform: uppercase;
+    color: #ffffff !important;
+    font-size: 20px;
+    /* font-family: 'Lato', sans-serif !important; */
+    letter-spacing: 0.1em;
+    font-weight: bold;
+}
+
+.text-menu:hover{
+    color: #0e1634 !important;
+}
+
+.bg-color-nav{
+    background-color: #14325d;
+}
+
+.nav-link{
+    padding: 0 !important;
+}
+
+
+

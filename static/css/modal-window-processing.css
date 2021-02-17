@@ -1,0 +1,52 @@
+a{
+	color: #646464;
+}
+a:hover{
+	color: #1a3c72;
+	text-decoration: none;
+}
+
+.popup-main-modal {
+    border: solid 1px #1a3c72;
+    padding: 10px;
+    background-color: #00000081;
+    width: 60%;
+    margin-top: 5%;
+	text-align: center;
+	cursor: pointer;
+}
+
+.border_radius_class {
+	border-radius: 10px;  
+	-moz-border-radius: 10px; 
+	-webkit-border-radius: 10px;  
+}
+
+.btn_close {
+    padding: 3%;
+    background-color: #1a3c72;
+    margin-top: 5%;
+    margin-bottom: 2%;
+    text-align: center;
+    display: block;
+    text-transform: uppercase;
+}
+
+.btn_group {
+	width: 30%;
+}
+
+/* свойства для блока, содержащего основное содержимое окна */
+.main-modal-processing-body {
+    position: relative;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 15px;
+    overflow: auto;
+}
+
+.main-modal-processing-body img{
+    width: 100%;
+}
